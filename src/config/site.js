@@ -94,7 +94,9 @@ const site = {
   familySites: [
     { name: 'DreamIT Biz (본사이트)', url: 'https://www.dreamitbiz.com' },
     { name: 'AI Prompt 프롬프트 엔지니어링', url: 'https://ai-prompt.dreamitbiz.com' },
-    { name: 'DB Study 데이터베이스', url: 'https://db-study.dreamitbiz.com' }
+    { name: 'AI Data 데이터 분석', url: 'https://ai-data.dreamitbiz.com' },
+    { name: 'DB Study 데이터베이스', url: 'https://db-study.dreamitbiz.com' },
+    { name: 'KoreaTech 한국기술교육', url: 'https://koreatech.dreamitbiz.com' }
   ]
 }
 
