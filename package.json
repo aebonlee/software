@@ -1,5 +1,7 @@
 {
   "name": "software-design",
+  "description": "소프트웨어 설계 학습",
+  "homepage": "https://software.dreamitbiz.com",
   "private": true,
   "version": "1.0.0",
   "type": "module",
