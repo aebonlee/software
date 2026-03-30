@@ -2,34 +2,21 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SW Design 소프트웨어 설계 & 구현</title>
-  <meta name="description" content="소프트웨어 설계 원칙부터 UML, 디자인 패턴, OOP, TDD까지 체계적으로 학습합니다." />
-
-  <!-- Open Graph -->
-  <meta property="og:url" content="https://software.dreamitbiz.com" />
-  <meta property="og:title" content="SW Design 소프트웨어 설계 & 구현" />
-  <meta property="og:description" content="소프트웨어 설계 원칙부터 UML, 디자인 패턴, OOP, TDD까지 체계적으로 학습합니다." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://software.dreamitbiz.com/og-image.png" />
-  <meta property="og:site_name" content="SW Design" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SW Design 소프트웨어 설계 & 구현" />
-  <meta name="twitter:description" content="소프트웨어 설계 원칙부터 UML, 디자인 패턴, OOP, TDD까지 체계적으로 학습합니다." />
-  <meta name="twitter:image" content="https://software.dreamitbiz.com/og-image.png" />
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="alternate icon" href="/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <script type="module" crossorigin src="/assets/index-Bkh7mmB8.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BkCtvGJb.css">
+  <title>SW Design</title>
+  <script>
+    // GitHub Pages SPA redirect
+    // https://github.com/rafgraph/spa-github-pages
+    var pathSegmentsToKeep = 0;
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
 </head>
 <body>
-  <div id="root"></div>
 </body>
 </html>
