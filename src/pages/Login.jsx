@@ -62,6 +62,11 @@ export default function Login() {
               <div className="auth-field"><input type="password" value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} placeholder="비밀번호" required /></div>
               <div className="auth-form-actions"><button type="button" className="auth-back-btn" onClick={() => { setStep('method'); setError('') }}>뒤로</button><button type="submit" className="auth-submit" disabled={loading} style={{ flex: 1 }}>{loading ? '로그인 중...' : '로그인'}</button></div>
             </form>
+            <div style={{ textAlign: 'center', marginBottom: '12px' }}>
+              <Link to="/forgot-password" style={{ fontSize: '13px', color: 'var(--text-light)' }}>
+                비밀번호를 잊으셨나요?
+              </Link>
+            </div>
             <div className="auth-link">계정이 없으신가요? <Link to="/register">회원가입</Link></div>
           </>
         )}

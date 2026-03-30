@@ -8,6 +8,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 const Home = lazy(() => import('./pages/Home'))
 const Login = lazy(() => import('./pages/Login'))
 const Register = lazy(() => import('./pages/Register'))
+const ForgotPassword = lazy(() => import('./pages/ForgotPassword'))
 const Profile = lazy(() => import('./pages/Profile'))
 
 const Sdlc = lazy(() => import('./pages/intro/Sdlc'))
@@ -76,6 +77,7 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
 
               <Route path="/intro/sdlc" element={<Sdlc />} />
