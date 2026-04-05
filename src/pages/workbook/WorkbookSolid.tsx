@@ -14,8 +14,8 @@ export default function WorkbookSolid() {
     void sendEmail() { /* 이메일 발송 */ }
     void generatePDF() { /* PDF 생성 */ }
     void saveToDB() { /* DB 저장 */ }
-}`}</code></pre><textarea className="exercise-textarea" rows="8" placeholder="리팩토링한 코드를 작성하세요..." /></div>
-        <div className="exercise-box"><h3>실습: OCP 적용</h3><p>결제 시스템(카드, 계좌이체, 포인트)을 OCP를 적용하여 설계하세요.</p><textarea className="exercise-textarea" rows="8" placeholder="인터페이스와 구현 클래스를 작성하세요..." /></div>
+}`}</code></pre><textarea className="exercise-textarea" rows={8} placeholder="리팩토링한 코드를 작성하세요..." /></div>
+        <div className="exercise-box"><h3>실습: OCP 적용</h3><p>결제 시스템(카드, 계좌이체, 포인트)을 OCP를 적용하여 설계하세요.</p><textarea className="exercise-textarea" rows={8} placeholder="인터페이스와 구현 클래스를 작성하세요..." /></div>
         <div className="lesson-nav"><Link to="/workbook/uml" className="lesson-nav-btn prev">&larr; 이전: UML 다이어그램</Link><Link to="/workbook/pattern-overview" className="lesson-nav-btn next">다음: 디자인 패턴 개요 &rarr;</Link></div>
       </div></section>
     </>

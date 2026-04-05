@@ -35,7 +35,7 @@ export default function Home() {
         <div className="hero-bg-effect">
           <div className="particles">
             {Array.from({ length: 20 }, (_, i) => (
-              <div key={i} className="particle" style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${3 + Math.random() * 5}px`, height: `${3 + Math.random() * 5}px`, '--duration': `${15 + Math.random() * 15}s`, animationDelay: `${Math.random() * 10}s` }} />
+              <div key={i} className="particle" style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${3 + Math.random() * 5}px`, height: `${3 + Math.random() * 5}px`, '--duration': `${15 + Math.random() * 15}s`, animationDelay: `${Math.random() * 10}s` } as React.CSSProperties} />
             ))}
           </div>
         </div>

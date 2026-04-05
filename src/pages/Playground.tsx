@@ -24,7 +24,7 @@ function analyzeDesign(text) {
 
   const pat = { name: '디자인 패턴', score: 0, max: 25, items: [] }
   const pats = [['Singleton', /singleton|getinstance|private static.*instance/i], ['Factory', /factory|createnotification|abstract.*create/i], ['Observer', /observer|subject|registerobserver|notifyobservers/i], ['Strategy', /strategy|setstrategy/i], ['Decorator', /decorator|wrappee/i]]
-  const found = pats.filter(([, r]) => r.test(text)).map(([n]) => n)
+  const found = pats.filter(([, r]) => (r as RegExp).test(text)).map(([n]) => n)
   pat.items.push({ label: '감지된 패턴', value: found.length ? found.join(', ') : '없음', good: found.length > 0 }); pat.score = Math.min(found.length * 8, 25)
   result.categories.push(pat); totalScore += pat.score
 

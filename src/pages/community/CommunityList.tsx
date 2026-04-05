@@ -29,7 +29,7 @@ export default function CommunityList() {
   const totalPages = Math.ceil(totalCount / PAGE_SIZE)
 
   function formatDate(dateStr) {
-    const d = new Date(dateStr), now = new Date(), diff = now - d
+    const d = new Date(dateStr), now = new Date(), diff = now.getTime() - d.getTime()
     if (diff < 60000) return '방금 전'
     if (diff < 3600000) return `${Math.floor(diff / 60000)}분 전`
     if (diff < 86400000) return `${Math.floor(diff / 3600000)}시간 전`

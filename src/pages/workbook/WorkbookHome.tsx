@@ -61,7 +61,7 @@ export default function WorkbookHome() {
                       {user && user.id === wb.author_id && <Link to={`/workbook/edit/${wb.id}`} className="lecture-btn edit-btn">수정</Link>}
                     </div></td>
                   </tr>
-                  {isExpanded && <tr className="lecture-dropdown-row"><td colSpan="3"><div className="lecture-dropdown-content">{wb.content ? <div className="lecture-content-text">{wb.content.split('\n').map((line, i) => <p key={i}>{line || '\u00A0'}</p>)}</div> : <p className="lecture-content-empty">내용이 없습니다.</p>}</div></td></tr>}
+                  {isExpanded && <tr className="lecture-dropdown-row"><td colSpan={3}><div className="lecture-dropdown-content">{wb.content ? <div className="lecture-content-text">{wb.content.split('\n').map((line, i) => <p key={i}>{line || '\u00A0'}</p>)}</div> : <p className="lecture-content-empty">내용이 없습니다.</p>}</div></td></tr>}
                 </React.Fragment>)
               })}</tbody>
             </table></div>
