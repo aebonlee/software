@@ -33,7 +33,7 @@ export default function Login() {
   const handleSocialLogin = async (provider) => {
     setError('')
     try { if (provider === 'google') await signInWithGoogle(); else if (provider === 'kakao') await signInWithKakao() }
-    catch (err) { setError(err.message || '로그인 중 오류가 발생했습니다.') }
+    catch (err: any) { setError(err.message || '로그인 중 오류가 발생했습니다.') }
   }
 
   return (
