@@ -4,6 +4,7 @@ import { ThemeProvider } from './contexts/ThemeContext'
 import { AuthProvider } from './contexts/AuthContext'
 import PublicLayout from './components/PublicLayout'
 import ProtectedRoute from './components/ProtectedRoute'
+import AdminGuard from './components/AdminGuard'
 
 const Home = lazy(() => import('./pages/Home'))
 const Login = lazy(() => import('./pages/Login'))
@@ -66,6 +67,7 @@ const CommunityWrite = lazy(() => import('./pages/community/CommunityWrite'))
 const CommunityView = lazy(() => import('./pages/community/CommunityView'))
 
 const NotFound = lazy(() => import('./pages/NotFound'))
+const AdminDashboard = lazy(() => import('./pages/admin/AdminDashboard'))
 
 export default function App() {
   return (
@@ -136,6 +138,7 @@ export default function App() {
               <Route path="/community/write" element={<ProtectedRoute><CommunityWrite /></ProtectedRoute>} />
               <Route path="/community/:id" element={<CommunityView />} />
 
+              <Route path="/admin/dashboard/*" element={<AdminGuard><AdminDashboard /></AdminGuard>} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

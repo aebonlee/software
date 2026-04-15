@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react'
 import { supabase } from '../config/supabase'
+import { ADMIN_EMAILS } from '../config/admin'
 
 const AuthContext = createContext<any>(null)
 
@@ -178,9 +179,17 @@ export function AuthProvider({ children }) {
     return { error }
   }
 
+  const allEmails = [
+    user?.email,
+    (user as any)?.user_metadata?.email,
+    (user as any)?.identities?.[0]?.identity_data?.email,
+  ].filter(Boolean).map((e: any) => e.toLowerCase())
+  const isAdmin = allEmails.some((e: string) => ADMIN_EMAILS.includes(e))
+
   const value = {
     user,
     loading,
+    isAdmin,
     accountBlock,
     clearAccountBlock,
     signUp,
